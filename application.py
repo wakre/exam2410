@@ -415,8 +415,11 @@ def main():
         server = UDPServer(args.ip, args.port, args.discard)
         server.start_server()
     elif args.client:
-        # Client handling logic would be added here
-        pass
+       if not args.file:
+           print("Error")
+           sys.exit*(1)
+        client= ReliableUDPClientServer(args.ip, args.port, file_path=args.file, window_size=args.window) 
+        client.start_client_transfer()
     else:
         print("Error: Please specify either server (-s) or client (-c) mode.")
         sys.exit(1)

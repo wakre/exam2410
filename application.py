@@ -46,7 +46,9 @@ class ReliableUDPClientServer:
     # Client-side functionality
     def start_client_transfer(self):
         try:
+            print ("[DEBUG] connected to server....")
             self.sock.connect((self.host, self.port))
+            print("[DEBUG] connection established with server")
             print("[INFO] Starting connection (Client Side)")
             self.initiate_connection()
         except (ConnectionRefusedError, socket.timeout):

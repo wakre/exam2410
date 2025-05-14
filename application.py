@@ -9,7 +9,7 @@ import struct
 # Constants
 HEADER_SIZE = 8  # bytes
 DATA_SIZE = 992  # bytes
-TIMEOUT = 0.4  # seconds (400 ms)
+TIMEOUT = 0.5  # seconds (400 ms)
 
 # Flag positions
 SYN_FLAG = 0b1000
